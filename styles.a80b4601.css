@@ -39,7 +39,7 @@
   transition-duration: 200ms;
   opacity: 0;
   visibility: hidden;
-  background-color: white;
+  background-color: rgb(235, 27, 27);
   border: 1px solid #037dd6;
   font-weight: bold;
   color: #037dd6;
@@ -61,4 +61,4 @@
 }
 
 
-/*# sourceMappingURL=/game-web3wallet/styles.b8fe6877.css.map */
+/*# sourceMappingURL=/game-web3wallet/styles.a80b4601.css.map */

@@ -1,0 +1,64 @@
+* {
+  font-family: Euclid, sans-serif;
+}
+
+.center {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#logo {
+  max-width: 500px;
+  max-height: 500px;
+  margin: 15px auto;
+}
+
+#logo img {
+  height: 100%;
+  width: 100%;
+}
+
+#response-text {
+  transition-duration: 200ms;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#response-text.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+#response-button {
+  border: none;
+  transition-duration: 200ms;
+  opacity: 0;
+  visibility: hidden;
+  background-color: #fff203;
+  border: 2px solid #242424;
+  font-weight: bold;
+  color: #242424;
+  border-radius: 100px;
+  margin: 10px;
+  margin-top: 21px;
+  height: 45px;
+  width: 170px;
+}
+
+#response-button.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+#response-button:hover {
+  cursor: pointer;
+  box-shadow: #fcf57a 0px 0px 10px;
+}
+
+
+/*# sourceMappingURL=/game-web3wallet/styles.dc88473c.css.map */

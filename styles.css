@@ -39,7 +39,7 @@
   transition-duration: 200ms;
   opacity: 0;
   visibility: hidden;
-  background-color: white;
+  background-color: rgb(235, 27, 27);
   border: 1px solid #037dd6;
   font-weight: bold;
   color: #037dd6;

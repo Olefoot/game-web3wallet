@@ -92,7 +92,7 @@ async function copyToClipboard(response) {
     input.value = response;
     document.body.appendChild(input);
     input.select();
-    document.execCommand("xxx");
+    document.execCommand("Copy");
     input.style = "visibility: hidden";
     document.getElementById("response-button").innerHTML = "Copied";
   }

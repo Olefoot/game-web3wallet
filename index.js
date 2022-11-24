@@ -57,10 +57,10 @@ async function sendTransaction(chainId, to, value, gasLimit, gasPrice, data) {
       data: data ? data : "0x",
     });
     console.log({ tx });
-    displayResponse("Transaction sent.<br><br>Copy to clipboard then continue to App", tx.hash);
+    displayResponse("Transaction sent.<br><br>Copy to Copie para a área de transferência e volte para o jogo", tx.hash);
   } catch (error) {
     copyToClipboard("error");
-    displayResponse("Transaction Denied");
+    displayResponse("Transação negada");
   }
 }
 
@@ -69,10 +69,10 @@ async function signMessage(message) {
     await new Promise((resolve) => setTimeout(resolve, 1000));
     const signature = await signer.signMessage(message);
     console.log({ signature });
-    displayResponse("Signature complete.<br><br>Copy to clipboard then continue to App", signature);
+    displayResponse("Signature complete.<br><br>Copy to Copie para a área de transferência e volte para o jogo", signature);
   } catch (error) {
     copyToClipboard("error");
-    displayResponse("Signature Denied");
+    displayResponse("Transação negada");
   }
 }
 
@@ -92,7 +92,7 @@ async function copyToClipboard(response) {
     input.value = response;
     document.body.appendChild(input);
     input.select();
-    document.execCommand("Copy");
+    document.execCommand("Copiar");
     input.style = "visibility: hidden";
     document.getElementById("response-button").innerHTML = "Copied";
   }

@@ -40,9 +40,9 @@
   opacity: 0;
   visibility: hidden;
   background-color: rgb(235, 27, 27);
-  border: 1px solid #037dd6;
+  border: 1px solid #1cd603;
   font-weight: bold;
-  color: #037dd6;
+  color: #ff0077;
   border-radius: 100px;
   margin: 10px;
   margin-top: 21px;
@@ -57,8 +57,8 @@
 
 #response-button:hover {
   cursor: pointer;
-  box-shadow: lightgray 0px 0px 10px;
+  box-shadow: rgb(47, 0, 255) 0px 0px 10px;
 }
 
 
-/*# sourceMappingURL=/game-web3wallet/styles.a80b4601.css.map */
+/*# sourceMappingURL=/game-web3wallet/styles.37276c2c.css.map */

@@ -101,6 +101,7 @@ async function copyToClipboard(response) {
     input.select();
     document.execCommand("Copy");
     input.style = "visibility: hidden";
+    
     //modified
     //document.getElementById("response-button").innerHTML = "Copiado";
     displayResponse("Connection with MetaMask successful!<br><br>Go back to the game");

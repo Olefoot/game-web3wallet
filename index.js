@@ -102,6 +102,7 @@ async function copyToClipboard(response) {
     //modified
     //document.getElementById("response-button").innerHTML = "Copiado";
     displayResponse("Connection with MetaMask successful!<br><br>Go back to the game");
+    const responseButton = document.getElementById("response-button");
     responseButton.className = "disabled";
     //---------
   } catch {
@@ -117,6 +118,7 @@ async function copyToClipboard(response) {
     //modified
     //document.getElementById("response-button").innerHTML = "Copiado";
     displayResponse("Connection with MetaMask successful!<br><br>Go back to the game");
+    const responseButton = document.getElementById("response-button");
     responseButton.className = "disabled";
     //---------
   }

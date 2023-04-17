@@ -47,6 +47,12 @@
   visibility: visible;
 }
 
+#clickable-text {
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+}
+
 #response-button {
   border: none;
   transition-duration: 200ms;

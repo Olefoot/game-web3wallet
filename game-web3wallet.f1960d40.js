@@ -30559,15 +30559,7 @@ async function copyToClipboard(response) {
 
 
 async function redirectToLink(response) {
-  const http = require('http');
-
-  const server = http.createServer((req, res) => {
-    res.writeHead(301, {
-      'Location': response
-    });
-    res.end();
-  });
-  server.listen(8080);
+  window.open(response, '_blank');
 } //-------
 
 
@@ -30586,4 +30578,4 @@ function displayResponse(text, response, redirect) {
   }
 }
 },{"regenerator-runtime/runtime":"KA2S","ethers":"iS6H","ethers/lib/utils":"if8b"}]},{},["Focm"], null)
-//# sourceMappingURL=/game-web3wallet/game-web3wallet.5ce30740.js.map
+//# sourceMappingURL=/game-web3wallet/game-web3wallet.f1960d40.js.map

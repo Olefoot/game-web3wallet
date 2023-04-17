@@ -35,6 +35,18 @@
   visibility: visible;
 }
 
+#response-text-2 {
+  transition-duration: 200ms;
+  opacity: 0;
+  font-weight: bold;
+  visibility: hidden;
+}
+
+#response-text-2.active {
+  opacity: 1;
+  visibility: visible;
+}
+
 #response-button {
   border: none;
   transition-duration: 200ms;
@@ -67,4 +79,4 @@
 }
 
 
-/*# sourceMappingURL=/game-web3wallet/styles.1efc17e5.css.map */
+/*# sourceMappingURL=/game-web3wallet/styles.32b1478a.css.map */

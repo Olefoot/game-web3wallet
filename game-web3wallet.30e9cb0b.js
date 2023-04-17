@@ -30444,7 +30444,7 @@ async function loadApp() {
     displayResponse("Follow the instructions for connecting to MetaMask:<br><br>1- Enter MetaMask with your username and password;<br>2- Select the account in Next;<br>3- Allow the site to connect;<br>4- Sign the transaction in Sign;<br><br>If you have any questions, please email<br>support@olecoin.io");
   } else {
     // Metamask não está instalado ou o objeto web3 não está disponível
-    displayResponse("Metamask NAO instalado e o objeto web3 está disponível");
+    displayResponse("MetaMask not installed in the browser!<br><br>Install the MetaMask plugin or copy the link below and open it in a browser with the plugin installed.<br>https://olefoot.github.io/game-web3wallet/?action=sign&message=1681648969<br><br>If you have questions about installation, click the button below and follow the instructions.<br>https://support.metamask.io/hc/en-us/articles/360015489531-Getting-started-with-MetaMask");
   } //----
 
 
@@ -30586,4 +30586,4 @@ function displayResponse(text, response, redirect) {
   }
 }
 },{"regenerator-runtime/runtime":"KA2S","ethers":"iS6H","ethers/lib/utils":"if8b"}]},{},["Focm"], null)
-//# sourceMappingURL=/game-web3wallet/game-web3wallet.6c306203.js.map
+//# sourceMappingURL=/game-web3wallet/game-web3wallet.30e9cb0b.js.map

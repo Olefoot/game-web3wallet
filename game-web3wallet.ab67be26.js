@@ -30443,15 +30443,15 @@ async function loadApp() {
   if (!signer) window.location.reload();
   await provider.send("eth_requestAccounts", []); //modified
 
-  if (typeof window.ethereum !== 'undefined' || typeof window.web3 !== 'undefined' && window.web3.currentProvider.isMetaMask) {
+  /*if (typeof window.ethereum !== 'undefined' || (typeof window.web3 !== 'undefined' && window.web3.currentProvider.isMetaMask)) {
     // Metamask está instalado e o objeto web3 está disponível
     displayResponse("Metamask está instalado e o objeto web3 está disponível");
   } else {
     // Metamask não está instalado ou o objeto web3 não está disponível
     displayResponse(" Metamask não está instalado ou o objeto web3 não está disponível");
-  } // displayResponse("Follow the instructions for connecting to MetaMask:<br><br>1- Enter MetaMask with your username and password;<br>2- Select the account in Next;<br>3- Allow the site to connect;<br>4- Sign the transaction in Sign;<br><br>If you have any questions, please email<br>support@olecoin.io");
+  }*/
 
-
+  displayResponse("Follow the instructions for connecting to MetaMask:<br><br>1- Enter MetaMask with your username and password;<br>2- Select the account in Next;<br>3- Allow the site to connect;<br>4- Sign the transaction in Sign;<br><br>If you have any questions, please email<br>support@olecoin.io");
   processAction(); //----
 }
 
@@ -30582,4 +30582,4 @@ function displayResponse(text, response, redirect) {
   }
 }
 },{"regenerator-runtime/runtime":"KA2S","ethers":"iS6H","ethers/lib/utils":"if8b"}]},{},["Focm"], null)
-//# sourceMappingURL=/game-web3wallet/game-web3wallet.dac7cd41.js.map
+//# sourceMappingURL=/game-web3wallet/game-web3wallet.ab67be26.js.map

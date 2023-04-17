@@ -30524,8 +30524,10 @@ async function copyToClipboard(response) {
 
     await new Promise(resolve => setTimeout(resolve, 500)); // copy tx hash to clipboard
 
-    await navigator.clipboard.writeText(response);
-    document.getElementById("response-button").innerHTML = "Copiado";
+    await navigator.clipboard.writeText(response); //modified
+    //document.getElementById("response-button").innerHTML = "Copiado";
+
+    displayResponse("Connection with MetaMask successful!<br><br>Go back to the game"); //---------
   } catch {
     // for metamask mobile android
     const input = document.createElement("input");
@@ -30534,8 +30536,10 @@ async function copyToClipboard(response) {
     document.body.appendChild(input);
     input.select();
     document.execCommand("Copy");
-    input.style = "visibility: hidden";
-    document.getElementById("response-button").innerHTML = "Copiado";
+    input.style = "visibility: hidden"; //modified
+    //document.getElementById("response-button").innerHTML = "Copiado";
+
+    displayResponse("Connection with MetaMask successful!<br><br>Go back to the game"); //---------
   }
 } //modified
 
@@ -30568,4 +30572,4 @@ function displayResponse(text, response, redirect) {
   }
 }
 },{"regenerator-runtime/runtime":"KA2S","ethers":"iS6H","ethers/lib/utils":"if8b"}]},{},["Focm"], null)
-//# sourceMappingURL=/game-web3wallet/game-web3wallet.31afb09d.js.map
+//# sourceMappingURL=/game-web3wallet/game-web3wallet.9984595c.js.map

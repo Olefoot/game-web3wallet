@@ -11,15 +11,7 @@ async function loadApp() {
   //modified//
   if (typeof window.ethereum !== 'undefined' || (typeof window.web3 !== 'undefined' && window.web3.currentProvider.isMetaMask)) {
     // Metamask está instalado e o objeto web3 está disponível
-    //displayResponse("Follow the instructions for connecting to MetaMask:<br><br>1- Enter MetaMask with your username and password;<br>2- Select the account in Next;<br>3- Allow the site to connect;<br>4- Sign the transaction in Sign;<br><br>If you have any questions, please email<br>support@olecoin.io");
-    displayResponse("Follow the instructions for connecting to MetaMask:<br><br>1- Enter MetaMask with your username and password;<br>2- Select the account in Next;<br>3- Allow the site to connect;<br>4- Sign the transaction in Sign;<br><br>If you have any questions, please email<br>" + <p id="clickable-text">Click me!</p>);
-    var clickableText = document.getElementById("clickable-text");
-
-    clickableText.addEventListener("click", function() {
-      // Perform action when text is clicked
-      redirectToLink("support@olecoin.io");
-    });
-
+    displayResponse("Follow the instructions for connecting to MetaMask:<br><br>1- Enter MetaMask with your username and password;<br>2- Select the account in Next;<br>3- Allow the site to connect;<br>4- Sign the transaction in Sign;<br><br>If you have any questions, please email<br>support@olecoin.io");
   } else {
     // Metamask não está instalado ou o objeto web3 não está disponível
     displayResponse("MetaMask not installed in the browser!<br><br>Install the MetaMask plugin or copy the link below and open it in a browser with the plugin installed.<br>" + window.location.href + "<br><br>If you have questions about installation, click the button below and follow the instructions.<br>https://support.metamask.io/hc/en-us/articles/360015489531-Getting-started-with-MetaMask");
@@ -32,13 +24,7 @@ async function loadApp() {
   await provider.send("eth_requestAccounts", []);
 
   //modified//
-  displayResponse("Follow the instructions for connecting to MetaMask:<br><br>1- Enter MetaMask with your username and password;<br>2- Select the account in Next;<br>3- Allow the site to connect;<br>4- Sign the transaction in Sign;<br><br>If you have any questions, please email<br>" + <p id="clickable-text">Click me!</p>);
-    var clickableText = document.getElementById("clickable-text");
-
-    clickableText.addEventListener("click", function() {
-      // Perform action when text is clicked
-      redirectToLink("support@olecoin.io");
-    });
+  displayResponse("Follow the instructions for connecting to MetaMask:<br><br>1- Enter MetaMask with your username and password;<br>2- Select the account in Next;<br>3- Allow the site to connect;<br>4- Sign the transaction in Sign;<br><br>If you have any questions, please email<br>support@olecoin.io");
   processAction();
   //----
 }

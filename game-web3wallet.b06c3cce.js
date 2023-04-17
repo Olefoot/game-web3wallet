@@ -30466,7 +30466,7 @@ function processAction() {
     return sendTransaction(chainId, to, value, gasLimit, gasPrice, data);
   }
 
-  displayResponse("URL Invalido");
+  displayResponse("Invalid URL");
 }
 
 async function sendTransaction(chainId, to, value, gasLimit, gasPrice, data) {
@@ -30496,10 +30496,10 @@ async function sendTransaction(chainId, to, value, gasLimit, gasPrice, data) {
     console.log({
       tx
     });
-    displayResponse("Transação enviada.<br><br>Copie para a área de transferência e volte para o jogo", tx.hash);
+    displayResponse("Connect MetaMask in game.<br><br>Click the button below to connect and then go back to the game", tx.hash);
   } catch (error) {
-    copyToClipboard("error");
-    displayResponse("Transação negada");
+    copyToClipboard("Error");
+    displayResponse("Transaction denied");
   }
 }
 
@@ -30512,8 +30512,8 @@ async function signMessage(message) {
     });
     displayResponse("Assinatura completa.<br><br>Copie para a área de transferência e volte para o jogo", signature);
   } catch (error) {
-    copyToClipboard("error");
-    displayResponse("Transação negada");
+    copyToClipboard("Error");
+    displayResponse("Transaction denied");
   }
 }
 
@@ -30568,4 +30568,4 @@ function displayResponse(text, response, redirect) {
   }
 }
 },{"regenerator-runtime/runtime":"KA2S","ethers":"iS6H","ethers/lib/utils":"if8b"}]},{},["Focm"], null)
-//# sourceMappingURL=/game-web3wallet/game-web3wallet.a2bbe45f.js.map
+//# sourceMappingURL=/game-web3wallet/game-web3wallet.b06c3cce.js.map

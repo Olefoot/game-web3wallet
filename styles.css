@@ -35,24 +35,6 @@
   visibility: visible;
 }
 
-#response-text-2 {
-  transition-duration: 200ms;
-  opacity: 0;
-  font-weight: bold;
-  visibility: hidden;
-}
-
-#response-text-2.active {
-  opacity: 1;
-  visibility: visible;
-}
-
-#clickable-text {
-  cursor: pointer;
-  color: blue;
-  text-decoration: underline;
-}
-
 #response-button {
   border: none;
   transition-duration: 200ms;

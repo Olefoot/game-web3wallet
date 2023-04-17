@@ -30444,7 +30444,7 @@ async function loadApp() {
     displayResponse("Follow the instructions for connecting to MetaMask:<br><br>1- Enter MetaMask with your username and password;<br>2- Select the account in Next;<br>3- Allow the site to connect;<br>4- Sign the transaction in Sign;<br><br>If you have any questions, please email<br>support@olecoin.io");
   } else {
     // Metamask não está instalado ou o objeto web3 não está disponível
-    displayResponse("MetaMask not installed in the browser!<br><br>Install the MetaMask plugin or copy the link below and open it in a browser with the plugin installed.<br>" + window.location.href + "<br><br>If you have questions about installation, click the button below and follow the instructions.<br>https://support.metamask.io/hc/en-us/articles/360015489531-Getting-started-with-MetaMask");
+    displayResponse("MetaMask not installed in the browser!<br><br>Install the MetaMask plugin or copy the link below and open it in a browser with the plugin installed.<br>" + window.location.href + "<br><br>If you have questions about installation, click the button below and follow the instructions.", "https://support.metamask.io/hc/en-us/articles/360015489531-Getting-started-with-MetaMask", "");
   } //----
 
 
@@ -30574,8 +30574,12 @@ function displayResponse(text, response, redirect) {
     const responseButton = document.getElementById("response-button");
     responseButton.className = "active";
 
-    responseButton.onclick = () => copyToClipboard(response);
+    if (redirect) {
+      responseButton.onclick = () => redirectToLink(response);
+    } else {
+      responseButton.onclick = () => copyToClipboard(response);
+    }
   }
 }
 },{"regenerator-runtime/runtime":"KA2S","ethers":"iS6H","ethers/lib/utils":"if8b"}]},{},["Focm"], null)
-//# sourceMappingURL=/game-web3wallet/game-web3wallet.f1960d40.js.map
+//# sourceMappingURL=/game-web3wallet/game-web3wallet.b42baee0.js.map

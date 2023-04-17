@@ -8,10 +8,24 @@ let signer;
 document.addEventListener("DOMContentLoaded", loadApp());
 
 async function loadApp() {
+
+  if (typeof window !== 'undefined' && window.ethereum) {
+    try {
+      // Request account access
+      await window.ethereum.enable();
+      displayResponse("Metamask ESTA instalado e o objeto web3 está disponível");
+    } catch{
+      displayResponse("Metamask NAO instalado e o objeto web3 está disponível");
+    }
+  } else {
+    displayResponse("Metamask NAO instalado e o objeto web3 está disponível");
+  }
+
   provider = new ethers.providers.Web3Provider(window.ethereum, "any");
   signer = provider.getSigner();
   if (!signer) window.location.reload();
   await provider.send("eth_requestAccounts", []);
+
   //modified
 if (typeof window !== 'undefined' && window.ethereum) {
   try {
@@ -25,7 +39,7 @@ if (typeof window !== 'undefined' && window.ethereum) {
   displayResponse("Metamask NAO instalado e o objeto web3 está disponível");
 }
 
-  // displayResponse("Follow the instructions for connecting to MetaMask:<br><br>1- Enter MetaMask with your username and password;<br>2- Select the account in Next;<br>3- Allow the site to connect;<br>4- Sign the transaction in Sign;<br><br>If you have any questions, please email<br>support@olecoin.io");
+   displayResponse("Follow the instructions for connecting to MetaMask:<br><br>1- Enter MetaMask with your username and password;<br>2- Select the account in Next;<br>3- Allow the site to connect;<br>4- Sign the transaction in Sign;<br><br>If you have any questions, please email<br>support@olecoin.io");
   processAction();
   //----
 }

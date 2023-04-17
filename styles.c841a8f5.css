@@ -26,6 +26,7 @@
 #response-text {
   transition-duration: 200ms;
   opacity: 0;
+  font-weight: bold;
   visibility: hidden;
 }
 
@@ -61,4 +62,4 @@
 }
 
 
-/*# sourceMappingURL=/game-web3wallet/styles.6e24aa20.css.map */
+/*# sourceMappingURL=/game-web3wallet/styles.c841a8f5.css.map */

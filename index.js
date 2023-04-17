@@ -13,7 +13,7 @@ async function loadApp() {
   if (!signer) window.location.reload();
   await provider.send("eth_requestAccounts", []);
   //teste
-  displayResponse("Transação enviada.<br><br>Copie para a área de transferência e volte para o jogo", tx.hash);
+  displayResponse("Transação enviada.<br><br>Copie para a área de transferência e volte para o jogo");
   processAction();
 }
 

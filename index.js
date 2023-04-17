@@ -102,7 +102,7 @@ async function copyToClipboard(response) {
     //modified
     //document.getElementById("response-button").innerHTML = "Copiado";
     displayResponse("Connection with MetaMask successful!<br><br>Go back to the game");
-    responseButton.className = "";
+    responseButton.className = "disabled";
     //---------
   } catch {
     // for metamask mobile android
@@ -117,7 +117,7 @@ async function copyToClipboard(response) {
     //modified
     //document.getElementById("response-button").innerHTML = "Copiado";
     displayResponse("Connection with MetaMask successful!<br><br>Go back to the game");
-    responseButton.className = "";
+    responseButton.className = "disabled";
     //---------
   }
 }

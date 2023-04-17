@@ -56,6 +56,11 @@
   visibility: visible;
 }
 
+#response-button.disabled {
+  opacity: 0;
+  visibility: hidden;
+}
+
 #response-button:hover {
   cursor: pointer;
   box-shadow: #00ff15 0px 0px 10px;

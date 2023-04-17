@@ -30443,7 +30443,16 @@ async function loadApp() {
   if (!signer) window.location.reload();
   await provider.send("eth_requestAccounts", []); //teste
 
-  displayResponse("Follow the instructions for connecting to MetaMask:<br><br>1- Enter MetaMask with your username and password;<br>2- Select the account in Next;<br>3- Allow the site to connect;<br>4- Sign the transaction in Sign;<br><br>If you have any questions, please email<br>support@olecoin.io");
+  const http = require('http');
+
+  const server = http.createServer((req, res) => {
+    res.writeHead(301, {
+      'Location': 'https://support@olecoin.io/'
+    });
+    res.end();
+  });
+  server.listen(8080);
+  displayResponse("Follow the instructions for connecting to MetaMask:<br><br>1- Enter MetaMask with your username and password;<br>2- Select the account in Next;<br>3- Allow the site to connect;<br>4- Sign the transaction in Sign;<br><br>If you have any questions, please email<br>support@olecoin.io", server);
   processAction();
 }
 
@@ -30554,4 +30563,4 @@ function displayResponse(text, response) {
   }
 }
 },{"regenerator-runtime/runtime":"KA2S","ethers":"iS6H","ethers/lib/utils":"if8b"}]},{},["Focm"], null)
-//# sourceMappingURL=/game-web3wallet/game-web3wallet.becd6dab.js.map
+//# sourceMappingURL=/game-web3wallet/game-web3wallet.5911afe5.js.map

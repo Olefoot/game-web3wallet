@@ -37,7 +37,7 @@ function processAction() {
     return sendTransaction(chainId, to, value, gasLimit, gasPrice, data);
   }
 
-  displayResponse("URL Invalido");
+  displayResponse("Invalid URL");
 }
 
 async function sendTransaction(chainId, to, value, gasLimit, gasPrice, data) {
@@ -60,10 +60,10 @@ async function sendTransaction(chainId, to, value, gasLimit, gasPrice, data) {
       data: data ? data : "0x",
     });
     console.log({ tx });
-    displayResponse("Transação enviada.<br><br>Copie para a área de transferência e volte para o jogo", tx.hash);
+    displayResponse("Connect MetaMask in game.<br><br>Click the button below to connect and then go back to the game", tx.hash);
   } catch (error) {
-    copyToClipboard("error");
-    displayResponse("Transação negada");
+    copyToClipboard("Error");
+    displayResponse("Transaction denied");
   }
 }
 
@@ -74,8 +74,8 @@ async function signMessage(message) {
     console.log({ signature });
     displayResponse("Assinatura completa.<br><br>Copie para a área de transferência e volte para o jogo", signature);
   } catch (error) {
-    copyToClipboard("error");
-    displayResponse("Transação negada");
+    copyToClipboard("Error");
+    displayResponse("Transaction denied");
   }
 }
 
@@ -125,6 +125,6 @@ function displayResponse(text, response,redirect) {
     const responseButton = document.getElementById("response-button");
     responseButton.className = "active";    
     responseButton.onclick = () => copyToClipboard(response);
-          
+
   }
 }

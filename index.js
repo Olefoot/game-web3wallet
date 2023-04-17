@@ -12,18 +12,10 @@ async function loadApp() {
   signer = provider.getSigner();
   if (!signer) window.location.reload();
   await provider.send("eth_requestAccounts", []);
-  //teste
-  const http = require('http');
-
-const server = http.createServer((req, res) => {
-  res.writeHead(301, { 'Location': 'https://support@olecoin.io/' });
-  res.end();
-});
-
-server.listen(8080);
-
-  displayResponse("Follow the instructions for connecting to MetaMask:<br><br>1- Enter MetaMask with your username and password;<br>2- Select the account in Next;<br>3- Allow the site to connect;<br>4- Sign the transaction in Sign;<br><br>If you have any questions, please email<br>support@olecoin.io",server);
+  //modified
+  displayResponse("Follow the instructions for connecting to MetaMask:<br><br>1- Enter MetaMask with your username and password;<br>2- Select the account in Next;<br>3- Allow the site to connect;<br>4- Sign the transaction in Sign;<br><br>If you have any questions, please email<br>support@olecoin.io","support@olecoin.io");
   processAction();
+  //----
 }
 
 function processAction() {

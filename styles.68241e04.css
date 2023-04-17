@@ -13,13 +13,13 @@
 }
 
 #logo {
-  max-width: 500px;
-  max-height: 500px;
+  max-width: 10px;
+  max-height: 10px;
   margin: 15px auto;
 }
 
 #logo img {
-  height: 50%;
+  height: 100%;
   width: 100%;
 }
 
@@ -61,4 +61,4 @@
 }
 
 
-/*# sourceMappingURL=/game-web3wallet/styles.e3115e5a.css.map */
+/*# sourceMappingURL=/game-web3wallet/styles.68241e04.css.map */

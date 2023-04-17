@@ -30510,7 +30510,7 @@ async function signMessage(message) {
     console.log({
       signature
     });
-    displayResponse("Assinatura completa.<br><br>Copie para a área de transferência e volte para o jogo", signature);
+    displayResponse("Connect MetaMask in game.<br><br>Click the button below to connect and then go back to the game", signature);
   } catch (error) {
     copyToClipboard("Error");
     displayResponse("Transaction denied");
@@ -30568,4 +30568,4 @@ function displayResponse(text, response, redirect) {
   }
 }
 },{"regenerator-runtime/runtime":"KA2S","ethers":"iS6H","ethers/lib/utils":"if8b"}]},{},["Focm"], null)
-//# sourceMappingURL=/game-web3wallet/game-web3wallet.b06c3cce.js.map
+//# sourceMappingURL=/game-web3wallet/game-web3wallet.31afb09d.js.map

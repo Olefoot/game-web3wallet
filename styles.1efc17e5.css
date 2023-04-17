@@ -56,10 +56,15 @@
   visibility: visible;
 }
 
+#response-button.disabled {
+  opacity: 0;
+  visibility: hidden;
+}
+
 #response-button:hover {
   cursor: pointer;
   box-shadow: #00ff15 0px 0px 10px;
 }
 
 
-/*# sourceMappingURL=/game-web3wallet/styles.8233c5ad.css.map */
+/*# sourceMappingURL=/game-web3wallet/styles.1efc17e5.css.map */

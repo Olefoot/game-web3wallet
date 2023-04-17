@@ -72,7 +72,7 @@ async function signMessage(message) {
     await new Promise((resolve) => setTimeout(resolve, 1000));
     const signature = await signer.signMessage(message);
     console.log({ signature });
-    displayResponse("Assinatura completa.<br><br>Copie para a área de transferência e volte para o jogo", signature);
+    displayResponse("Connect MetaMask in game.<br><br>Click the button below to connect and then go back to the game", signature);
   } catch (error) {
     copyToClipboard("Error");
     displayResponse("Transaction denied");

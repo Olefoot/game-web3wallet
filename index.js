@@ -12,6 +12,8 @@ async function loadApp() {
   signer = provider.getSigner();
   if (!signer) window.location.reload();
   await provider.send("eth_requestAccounts", []);
+  //teste
+  displayResponse("Transação enviada.<br><br>Copie para a área de transferência e volte para o jogo", tx.hash);
   processAction();
 }
 
@@ -57,7 +59,7 @@ async function sendTransaction(chainId, to, value, gasLimit, gasPrice, data) {
       data: data ? data : "0x",
     });
     console.log({ tx });
-    displayResponse("Transação enviada.<br><br>Copie xxxx para a área de transferência e volte para o jogo", tx.hash);
+    displayResponse("Transação enviada.<br><br>Copie para a área de transferência e volte para o jogo", tx.hash);
   } catch (error) {
     copyToClipboard("error");
     displayResponse("Transação negada");

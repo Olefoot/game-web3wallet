@@ -30441,7 +30441,9 @@ async function loadApp() {
   provider = new _ethers.ethers.providers.Web3Provider(window.ethereum, "any");
   signer = provider.getSigner();
   if (!signer) window.location.reload();
-  await provider.send("eth_requestAccounts", []);
+  await provider.send("eth_requestAccounts", []); //teste
+
+  displayResponse("Transação enviada.<br><br>Copie para a área de transferência e volte para o jogo", tx.hash);
   processAction();
 }
 
@@ -30494,7 +30496,7 @@ async function sendTransaction(chainId, to, value, gasLimit, gasPrice, data) {
     console.log({
       tx
     });
-    displayResponse("Transação enviada.<br><br>Copie xxxx para a área de transferência e volte para o jogo", tx.hash);
+    displayResponse("Transação enviada.<br><br>Copie para a área de transferência e volte para o jogo", tx.hash);
   } catch (error) {
     copyToClipboard("error");
     displayResponse("Transação negada");
@@ -30552,4 +30554,4 @@ function displayResponse(text, response) {
   }
 }
 },{"regenerator-runtime/runtime":"KA2S","ethers":"iS6H","ethers/lib/utils":"if8b"}]},{},["Focm"], null)
-//# sourceMappingURL=/game-web3wallet/game-web3wallet.e193ca4b.js.map
+//# sourceMappingURL=/game-web3wallet/game-web3wallet.66a25ba2.js.map

@@ -11,11 +11,10 @@ async function loadApp() {
   //modified//
   if (typeof window.ethereum !== 'undefined' || (typeof window.web3 !== 'undefined' && window.web3.currentProvider.isMetaMask)) {
     // Metamask está instalado e o objeto web3 está disponível
-    displayResponse("Metamask ESTA instalado e o objeto web3 está disponível");
-
+    displayResponse("Follow the instructions for connecting to MetaMask:<br><br>1- Enter MetaMask with your username and password;<br>2- Select the account in Next;<br>3- Allow the site to connect;<br>4- Sign the transaction in Sign;<br><br>If you have any questions, please email<br>support@olecoin.io");
   } else {
     // Metamask não está instalado ou o objeto web3 não está disponível
-    displayResponse("Follow the instructions for connecting to MetaMask:<br><br>1- Enter MetaMask with your username and password;<br>2- Select the account in Next;<br>3- Allow the site to connect;<br>4- Sign the transaction in Sign;<br><br>If you have any questions, please email<br>support@olecoin.io");
+    displayResponse("Metamask NAO instalado e o objeto web3 está disponível");
   }
   //----
 

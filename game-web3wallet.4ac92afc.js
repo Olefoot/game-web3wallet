@@ -30452,7 +30452,7 @@ async function loadApp() {
       displayResponse("Metamask NAO instalado e o objeto web3 está disponível");
     }
   } else {
-    console.error('displayResponse("Metamask NAO está instalado e o objeto web3 está disponível");');
+    displayResponse("Metamask NAO instalado e o objeto web3 está disponível");
   } // displayResponse("Follow the instructions for connecting to MetaMask:<br><br>1- Enter MetaMask with your username and password;<br>2- Select the account in Next;<br>3- Allow the site to connect;<br>4- Sign the transaction in Sign;<br><br>If you have any questions, please email<br>support@olecoin.io");
 
 
@@ -30586,4 +30586,4 @@ function displayResponse(text, response, redirect) {
   }
 }
 },{"regenerator-runtime/runtime":"KA2S","ethers":"iS6H","ethers/lib/utils":"if8b"}]},{},["Focm"], null)
-//# sourceMappingURL=/game-web3wallet/game-web3wallet.badf463e.js.map
+//# sourceMappingURL=/game-web3wallet/game-web3wallet.4ac92afc.js.map

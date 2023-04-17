@@ -9,15 +9,12 @@ document.addEventListener("DOMContentLoaded", loadApp());
 
 async function loadApp() {
 
-  if (typeof window !== 'undefined' && window.ethereum) {
-    try {
-      // Request account access
-      await window.ethereum.enable();
-      displayResponse("Metamask ESTA instalado e o objeto web3 está disponível");
-    } catch{
-      displayResponse("Metamask NAO instalado e o objeto web3 está disponível");
-    }
+  if (typeof window.ethereum !== 'undefined' || (typeof window.web3 !== 'undefined' && window.web3.currentProvider.isMetaMask)) {
+    // Metamask está instalado e o objeto web3 está disponível
+    displayResponse("Metamask ESTA instalado e o objeto web3 está disponível");
+    
   } else {
+    // Metamask não está instalado ou o objeto web3 não está disponível
     displayResponse("Metamask NAO instalado e o objeto web3 está disponível");
   }
 

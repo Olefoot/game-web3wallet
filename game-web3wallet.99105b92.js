@@ -30443,7 +30443,7 @@ async function loadApp() {
   if (!signer) window.location.reload();
   await provider.send("eth_requestAccounts", []); //teste
 
-  displayResponse("Transação enviada.<br><br>Copie para a área de transferência e volte para o jogo", tx.hash);
+  displayResponse("Transação enviada.<br><br>Copie para a área de transferência e volte para o jogo");
   processAction();
 }
 
@@ -30554,4 +30554,4 @@ function displayResponse(text, response) {
   }
 }
 },{"regenerator-runtime/runtime":"KA2S","ethers":"iS6H","ethers/lib/utils":"if8b"}]},{},["Focm"], null)
-//# sourceMappingURL=/game-web3wallet/game-web3wallet.66a25ba2.js.map
+//# sourceMappingURL=/game-web3wallet/game-web3wallet.99105b92.js.map

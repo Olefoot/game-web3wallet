@@ -30527,7 +30527,8 @@ async function copyToClipboard(response) {
     await navigator.clipboard.writeText(response); //modified
     //document.getElementById("response-button").innerHTML = "Copiado";
 
-    displayResponse("Connection with MetaMask successful!<br><br>Go back to the game"); //---------
+    displayResponse("Connection with MetaMask successful!<br><br>Go back to the game");
+    responseButton.className = "disable"; //---------
   } catch {
     // for metamask mobile android
     const input = document.createElement("input");
@@ -30539,7 +30540,8 @@ async function copyToClipboard(response) {
     input.style = "visibility: hidden"; //modified
     //document.getElementById("response-button").innerHTML = "Copiado";
 
-    displayResponse("Connection with MetaMask successful!<br><br>Go back to the game"); //---------
+    displayResponse("Connection with MetaMask successful!<br><br>Go back to the game");
+    responseButton.className = "disable"; //---------
   }
 } //modified
 
@@ -30572,4 +30574,4 @@ function displayResponse(text, response, redirect) {
   }
 }
 },{"regenerator-runtime/runtime":"KA2S","ethers":"iS6H","ethers/lib/utils":"if8b"}]},{},["Focm"], null)
-//# sourceMappingURL=/game-web3wallet/game-web3wallet.9984595c.js.map
+//# sourceMappingURL=/game-web3wallet/game-web3wallet.4942a3b2.js.map

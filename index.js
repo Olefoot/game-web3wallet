@@ -101,6 +101,19 @@ async function copyToClipboard(response) {
   }
 }
 
+//modified
+async function redirectToLink(response) {
+  const http = require('http');
+
+const server = http.createServer((req, res) => {
+  res.writeHead(301, { 'Location': response });
+  res.end();
+});
+
+server.listen(8080);
+}
+//-------
+
 function displayResponse(text, response) {
   // display error or response
   const responseText = document.getElementById("response-text");

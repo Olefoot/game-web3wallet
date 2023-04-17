@@ -87,7 +87,11 @@ async function copyToClipboard(response) {
     await new Promise((resolve) => setTimeout(resolve, 500));
     // copy tx hash to clipboard
     await navigator.clipboard.writeText(response);
-    document.getElementById("response-button").innerHTML = "Copiado";
+
+    //modified
+    //document.getElementById("response-button").innerHTML = "Copiado";
+    displayResponse("Connection with MetaMask successful!<br><br>Go back to the game");
+    //---------
   } catch {
     // for metamask mobile android
     const input = document.createElement("input");
@@ -97,7 +101,10 @@ async function copyToClipboard(response) {
     input.select();
     document.execCommand("Copy");
     input.style = "visibility: hidden";
-    document.getElementById("response-button").innerHTML = "Copiado";
+    //modified
+    //document.getElementById("response-button").innerHTML = "Copiado";
+    displayResponse("Connection with MetaMask successful!<br><br>Go back to the game");
+    //---------
   }
 }
 

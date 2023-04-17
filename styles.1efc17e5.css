@@ -13,14 +13,14 @@
 }
 
 #logo {
-  max-width: 100px;
-  max-height: 100px;
+  max-width: 200px;
+  max-height: 200px;
   margin: 45px auto;
 }
 
 #logo img {
-  height: 250%;
-  width: 250%;
+  height: 100%;
+  width: 100%;
 }
 
 #response-text {
@@ -67,4 +67,4 @@
 }
 
 
-/*# sourceMappingURL=/game-web3wallet/styles.f5d5af3c.css.map */
+/*# sourceMappingURL=/game-web3wallet/styles.1efc17e5.css.map */

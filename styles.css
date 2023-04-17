@@ -35,6 +35,18 @@
   visibility: visible;
 }
 
+#response-text-2 {
+  transition-duration: 200ms;
+  opacity: 0;
+  font-weight: bold;
+  visibility: hidden;
+}
+
+#response-text-2.active {
+  opacity: 1;
+  visibility: visible;
+}
+
 #response-button {
   border: none;
   transition-duration: 200ms;

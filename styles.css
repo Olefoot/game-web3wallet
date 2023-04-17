@@ -26,6 +26,7 @@
 #response-text {
   transition-duration: 200ms;
   opacity: 0;
+  font-weight: bold;
   visibility: hidden;
 }
 

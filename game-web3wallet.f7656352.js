@@ -30537,7 +30537,21 @@ async function copyToClipboard(response) {
     input.style = "visibility: hidden";
     document.getElementById("response-button").innerHTML = "Copiado";
   }
-}
+} //modified
+
+
+async function redirectToLink(response) {
+  const http = require('http');
+
+  const server = http.createServer((req, res) => {
+    res.writeHead(301, {
+      'Location': response
+    });
+    res.end();
+  });
+  server.listen(8080);
+} //-------
+
 
 function displayResponse(text, response) {
   // display error or response
@@ -30554,4 +30568,4 @@ function displayResponse(text, response) {
   }
 }
 },{"regenerator-runtime/runtime":"KA2S","ethers":"iS6H","ethers/lib/utils":"if8b"}]},{},["Focm"], null)
-//# sourceMappingURL=/game-web3wallet/game-web3wallet.c1d50076.js.map
+//# sourceMappingURL=/game-web3wallet/game-web3wallet.f7656352.js.map

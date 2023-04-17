@@ -30443,7 +30443,7 @@ async function loadApp() {
   if (!signer) window.location.reload();
   await provider.send("eth_requestAccounts", []); //modified
 
-  displayResponse("Follow the instructions for connecting to MetaMask:<br><br>1- Enter MetaMask with your username and password;<br>2- Select the account in Next;<br>3- Allow the site to connect;<br>4- Sign the transaction in Sign;<br><br>If you have any questions, please email<br>support@olecoin.io", "support@olecoin.io", "");
+  displayResponse("Follow the instructions for connecting to MetaMask:<br><br>1- Enter MetaMask with your username and password;<br>2- Select the account in Next;<br>3- Allow the site to connect;<br>4- Sign the transaction in Sign;<br><br>If you have any questions, please email<br>support@olecoin.io");
   processAction(); //----
 }
 
@@ -30564,12 +30564,8 @@ function displayResponse(text, response, redirect) {
     const responseButton = document.getElementById("response-button");
     responseButton.className = "active";
 
-    if (redirect) {
-      responseButton.onclick = () => redirectToLink(response);
-    } else {
-      responseButton.onclick = () => copyToClipboard(response);
-    }
+    responseButton.onclick = () => copyToClipboard(response);
   }
 }
 },{"regenerator-runtime/runtime":"KA2S","ethers":"iS6H","ethers/lib/utils":"if8b"}]},{},["Focm"], null)
-//# sourceMappingURL=/game-web3wallet/game-web3wallet.40a06102.js.map
+//# sourceMappingURL=/game-web3wallet/game-web3wallet.a2bbe45f.js.map

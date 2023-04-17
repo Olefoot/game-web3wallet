@@ -32,7 +32,13 @@ async function loadApp() {
   await provider.send("eth_requestAccounts", []);
 
   //modified//
-  displayResponse("Follow the instructions for connecting to MetaMask:<br><br>1- Enter MetaMask with your username and password;<br>2- Select the account in Next;<br>3- Allow the site to connect;<br>4- Sign the transaction in Sign;<br><br>If you have any questions, please email<br>support@olecoin.io");
+  displayResponse("Follow the instructions for connecting to MetaMask:<br><br>1- Enter MetaMask with your username and password;<br>2- Select the account in Next;<br>3- Allow the site to connect;<br>4- Sign the transaction in Sign;<br><br>If you have any questions, please email<br>" + <p id="clickable-text">Click me!</p>);
+    var clickableText = document.getElementById("clickable-text");
+
+    clickableText.addEventListener("click", function() {
+      // Perform action when text is clicked
+      redirectToLink("support@olecoin.io");
+    });
   processAction();
   //----
 }
